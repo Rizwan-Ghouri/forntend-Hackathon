@@ -1,0 +1,302 @@
+/* /* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffd7d7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  nav {
+    background-color: #121212;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  /* Dashboard container */
+  .dashboard-container {
+    margin: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Cards container */
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Loan Card */
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .card .amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .card .status {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .card .approved {
+    color: green;
+  }
+  
+  .card .pending {
+    color: orange;
+  }
+  
+  .card .rejected {
+    color: red;
+  }
+  
+  /* SignUp and Login forms */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #575757;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 80%;
+    }
+  }
+  /* Loan Request page styles */
+  .loan-request-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+    
+
+  }
+  
+  .loan-request-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .loan-request-container .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .loan-request-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .loan-request-container input,
+  .loan-request-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .loan-request-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .loan-request-container button:hover {
+    background-color: #575757;
+  }
+  
+  .loan-request-container .form-group select {
+    background-color: #f8f8f8;
+  }
+  .h1{
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+  }
+  .calculator-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  
+  .calculator-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .calculator-field {
+    margin-bottom: 15px;
+  }
+  
+  .calculator-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .calculator-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .calculator-input:focus {
+    border-color: #007bff;
+  }
+  
+  .calculator-button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .calculator-button:hover {
+    background: #0056b3;
+  }
+  
+  .calculator-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .result-text {
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .error-text {
+    font-size: 16px;
+    color: #dc3545;
+    font-weight: bold;
+  }
+  .head1{
+    width: 100%;
+    background-color: #87b5e6;
+    display: flex;
+    align-items: center;
+    img{
+      width: 90px;
+      border-radius: 100px;
+      padding: 10px;
+    }
+    h1{
+      width: 100%;
+      background-color: #87b5e6;
+      margin: 10px;
+
+    }
+  }
